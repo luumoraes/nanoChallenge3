@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		513E589A281B1B4100B20C38 /* Cartao+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E5894281B1B4100B20C38 /* Cartao+CoreDataClass.swift */; };
+		513E589B281B1B4100B20C38 /* Cartao+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E5895281B1B4100B20C38 /* Cartao+CoreDataProperties.swift */; };
+		513E589C281B1B4100B20C38 /* Historico+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E5896281B1B4100B20C38 /* Historico+CoreDataClass.swift */; };
+		513E589D281B1B4100B20C38 /* Historico+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E5897281B1B4100B20C38 /* Historico+CoreDataProperties.swift */; };
+		513E589E281B1B4100B20C38 /* Deck+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E5898281B1B4100B20C38 /* Deck+CoreDataClass.swift */; };
+		513E589F281B1B4100B20C38 /* Deck+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E5899281B1B4100B20C38 /* Deck+CoreDataProperties.swift */; };
 		516D88E42819DC1F0033F467 /* FlashCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D88E32819DC1F0033F467 /* FlashCard.swift */; };
 		517F95232819D4BD00AA2B2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517F95222819D4BD00AA2B2B /* AppDelegate.swift */; };
 		517F95252819D4BD00AA2B2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517F95242819D4BD00AA2B2B /* SceneDelegate.swift */; };
@@ -19,6 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		513E5894281B1B4100B20C38 /* Cartao+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cartao+CoreDataClass.swift"; sourceTree = "<group>"; };
+		513E5895281B1B4100B20C38 /* Cartao+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cartao+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		513E5896281B1B4100B20C38 /* Historico+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Historico+CoreDataClass.swift"; sourceTree = "<group>"; };
+		513E5897281B1B4100B20C38 /* Historico+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Historico+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		513E5898281B1B4100B20C38 /* Deck+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deck+CoreDataClass.swift"; sourceTree = "<group>"; };
+		513E5899281B1B4100B20C38 /* Deck+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deck+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		516D88E32819DC1F0033F467 /* FlashCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCard.swift; sourceTree = "<group>"; };
 		517F951F2819D4BD00AA2B2B /* flashcard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flashcard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		517F95222819D4BD00AA2B2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +55,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		513E58A0281B1B4D00B20C38 /* CoreDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				513E5898281B1B4100B20C38 /* Deck+CoreDataClass.swift */,
+				513E5899281B1B4100B20C38 /* Deck+CoreDataProperties.swift */,
+				513E5894281B1B4100B20C38 /* Cartao+CoreDataClass.swift */,
+				513E5895281B1B4100B20C38 /* Cartao+CoreDataProperties.swift */,
+				513E5896281B1B4100B20C38 /* Historico+CoreDataClass.swift */,
+				513E5897281B1B4100B20C38 /* Historico+CoreDataProperties.swift */,
+			);
+			path = CoreDataModel;
+			sourceTree = "<group>";
+		};
 		517F95162819D4BD00AA2B2B = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +87,7 @@
 		517F95212819D4BD00AA2B2B /* flashcard */ = {
 			isa = PBXGroup;
 			children = (
+				513E58A0281B1B4D00B20C38 /* CoreDataModel */,
 				517F95222819D4BD00AA2B2B /* AppDelegate.swift */,
 				517F95242819D4BD00AA2B2B /* SceneDelegate.swift */,
 				517F95262819D4BD00AA2B2B /* ViewController.swift */,
@@ -147,12 +173,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				513E589D281B1B4100B20C38 /* Historico+CoreDataProperties.swift in Sources */,
 				517F95272819D4BD00AA2B2B /* ViewController.swift in Sources */,
+				513E589E281B1B4100B20C38 /* Deck+CoreDataClass.swift in Sources */,
 				51856207281AE7BF00FE3A5F /* QuestionCard.swift in Sources */,
 				517F95232819D4BD00AA2B2B /* AppDelegate.swift in Sources */,
 				517F952D2819D4BD00AA2B2B /* flashcard.xcdatamodeld in Sources */,
 				517F95252819D4BD00AA2B2B /* SceneDelegate.swift in Sources */,
+				513E589A281B1B4100B20C38 /* Cartao+CoreDataClass.swift in Sources */,
 				516D88E42819DC1F0033F467 /* FlashCard.swift in Sources */,
+				513E589C281B1B4100B20C38 /* Historico+CoreDataClass.swift in Sources */,
+				513E589F281B1B4100B20C38 /* Deck+CoreDataProperties.swift in Sources */,
+				513E589B281B1B4100B20C38 /* Cartao+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

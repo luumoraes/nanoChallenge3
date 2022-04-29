@@ -11,15 +11,24 @@ class FlashCard: UIViewController {
     
     weak var card: QuestionCard?
     
+    public var selectedDeck: Deck?
+    public var cardList: [Cartao] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = selectedDeck?.nome ?? "N/A"
+        
+        self.cardList = selectedDeck?.cartao ?? []
+        
+        print(cardList)
         
         let card = QuestionCard()
         
         //setQuestion = lado da pergunta
-        card.setQuestion(question: "Quando começou a segunda guerra?")
+        card.setQuestion(question: self.cardList.first?.perguntas ?? "N/A")
         //setAnswer = lado da resposta
-        card.setAnswer(answer: "1939")
+        card.setAnswer(answer: self.cardList.first?.respostas ?? "N/A")
         
         view.addSubview(card)
         
@@ -29,7 +38,7 @@ class FlashCard: UIViewController {
         //ativação das constraints (UiView)
         NSLayoutConstraint.activate([
             card.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            card.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            card.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             card.heightAnchor.constraint(equalToConstant: view.frame.height * 0.4),
             card.widthAnchor.constraint(equalToConstant: view.frame.width * 0.9)
         ])

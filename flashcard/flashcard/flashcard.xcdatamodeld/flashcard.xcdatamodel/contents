@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Cartao" representedClassName="Cartao" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="perguntas" optional="YES" attributeType="String"/>
+        <attribute name="respostas" optional="YES" attributeType="String"/>
+        <relationship name="deck" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Deck" inverseName="cartao" inverseEntity="Deck"/>
+    </entity>
+    <entity name="Deck" representedClassName="Deck" syncable="YES">
+        <attribute name="nome" optional="YES" attributeType="String"/>
+        <relationship name="cartao" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Cartao" inverseName="deck" inverseEntity="Cartao"/>
+        <relationship name="historico" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Historico" inverseName="deck" inverseEntity="Historico"/>
+    </entity>
+    <entity name="Historico" representedClassName="Historico" syncable="YES">
+        <attribute name="acertos" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="data" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="total" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="deck" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Deck" inverseName="historico" inverseEntity="Deck"/>
+    </entity>
+    <elements>
+        <element name="Cartao" positionX="-236.9833984375" positionY="-20.636474609375" width="128" height="103"/>
+        <element name="Deck" positionX="-54" positionY="9" width="128" height="88"/>
+        <element name="Historico" positionX="139.83203125" positionY="-6.0362548828125" width="128" height="103"/>
+    </elements>
 </model>

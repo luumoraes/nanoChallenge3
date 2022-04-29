@@ -47,7 +47,7 @@ class QuestionCard: UIControl {
                 title?.text = "PERGUNTA"
                 text?.text = questionText
                 
-                UIView.transition(with: self, duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+                UIView.transition(with: self, duration: 0.5, options: .transitionFlipFromRight, animations: nil, completion: nil)
             }
         }
     }

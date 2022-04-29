@@ -32,10 +32,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+     func criarDeck() {
+        // Array com nome dos decks
+        let decks: [String] = ["Revolução Industrial", "1ª Guerra Mundial", "2ª Guerra Mundial", "Iluminismo"]
+    }
+    
+    private func criarPerguntasRespostas() {
+        // Matriz [[]] Pergunta e outra para Resposta
+        
+        let perguntas: [[String]] = [["Quando começou a primeira Revolução Industrial?"], ["Quando começou a Primeira Guerra Mundial?"], ["Quando começou a Segunda Guerra Mundial?"], ["Quando começou o o Iluminismo?"]]
+        
+        let respostas: [[String]] = [["1760"], ["1914"], ["1939"], ["1685"]]
+    }
+    
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
-        /*
+        /*r
          The persistent container for the application. This implementation
          creates and returns a container, having loaded the store for the
          application to it. This property is optional since there are legitimate
