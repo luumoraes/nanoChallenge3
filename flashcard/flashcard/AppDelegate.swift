@@ -15,6 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if isNewUser() {
+            let context = persistentContainer.newBackgroundContext()
+            popularDeck(context: context)
+            popualCards(context: context)
+            setAsNotNewUser()
+        }
+        
         return true
     }
 
@@ -32,17 +40,88 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-     func criarDeck() {
-        // Array com nome dos decks
-        let decks: [String] = ["Revolução Industrial", "1ª Guerra Mundial", "2ª Guerra Mundial", "Iluminismo"]
+    // Verifica se o aplicativo foi aberto pela primeira vez
+    private func isNewUser() -> Bool {
+        return !UserDefaults.standard.bool(forKey: "isNewUser")
     }
     
-    private func criarPerguntasRespostas() {
+    // Altera o valor booleano para informar que o usuário já abriu o app
+    private func setAsNotNewUser() {
+        UserDefaults.standard.set(true, forKey: "isNewUser")
+    }
+    
+    // Função para salvar alterações no Core Data
+    private func saveContext(context: NSManagedObjectContext) {
+        do { try context.save() } catch { print(error) }
+    }
+    
+    // Função para criar Decks
+    private func createDeck(name: String, context: NSManagedObjectContext) {
+        let newDeck = Deck(context: context)
+        newDeck.setValue(name, forKey: "nome")
+        saveContext(context: context)
+    }
+    
+    // Função para criar Card
+    private func createCard(pergunta: String, resposta: String, id: Int, belongsTo deck: Deck, context: NSManagedObjectContext) {
+        let newCard = Cartao(context: context)
+        newCard.setValue(pergunta, forKey: "pergunta")
+        newCard.setValue(resposta, forKey: "resposta")
+        newCard.setValue(id, forKey: "id")
+        
+        //Criando o relacionamento com o Deck
+        deck.addToCartao(newCard)
+        
+        saveContext(context: context)
+    }
+    
+    // Função para puxar o Array de Decks
+    private func fetchDecks(context: NSManagedObjectContext) -> [Deck] {
+        let fetchRequest = Deck.fetchRequest()
+        var lista: [Deck] = []
+        
+        do {
+            lista = try context.fetch(fetchRequest)
+        } catch { print(error) }
+        
+        return lista
+    }
+    
+    func popularDeck(context: NSManagedObjectContext) {
+        // Array com nome dos decks
+        let decks: [String] = ["Revolução Industrial", "1ª Guerra Mundial", "2ª Guerra Mundial", "Iluminismo", "Não pode"]
+         
+        for i in decks {
+            createDeck(name: i, context: context)
+        }
+    }
+    
+    private func popualCards(context: NSManagedObjectContext) {
+        // Puxando os Decks que foram salvos
+        let listaDecks = fetchDecks(context: context)
+        
         // Matriz [[]] Pergunta e outra para Resposta
+        let pergunta: [[String]] = [
+            ["Quando começou a primeira Revolução Industrial?", "1+1"],
+            ["Quando começou a Primeira Guerra Mundial?"],
+            ["Quando começou a Segunda Guerra Mundial?"],
+            ["Quando começou o o Iluminismo?"],
+            ["sla"]]
         
-        let perguntas: [[String]] = [["Quando começou a primeira Revolução Industrial?"], ["Quando começou a Primeira Guerra Mundial?"], ["Quando começou a Segunda Guerra Mundial?"], ["Quando começou o o Iluminismo?"]]
+        let resposta: [[String]] = [
+            ["1760", "3"],
+            ["1914"],
+            ["1939"],
+            ["1685"],
+            ["asas"]]
         
-        let respostas: [[String]] = [["1760"], ["1914"], ["1939"], ["1685"]]
+        // Iterar cada nome de Deck
+        for i in 0..<listaDecks.count {
+            // Iterar cada array de pergunta e resposta
+            for j in 0..<pergunta[i].count {
+                createCard(pergunta: pergunta[i][j], resposta: resposta[i][j], id: i, belongsTo: listaDecks[i], context: context)
+            }
+        }
     }
     
     // MARK: - Core Data stack

@@ -42,7 +42,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        createAll()
         self.deck = fetchDecks()
         
         tableView?.dataSource = self
@@ -50,11 +49,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        
         title = "História"
     }
     
-    //Armazenar dados no CoreData
+    //Puxar dados no CoreData
     private func fetchDecks() -> [Deck] {
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return [] }
@@ -70,38 +68,5 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         
         return list
-    }
-    
-    private func createAll() {
-        // Acessar a fil AppDelegate.swift
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        // Pegar o acesso com o Core Data
-        let context = appDelegate.persistentContainer.viewContext
-        
-        // Criar um Deck no Core Data
-        let newDeck = Deck(context: context)
-        
-        newDeck.setValue("Revolução Industrial", forKey: "nome")
-        
-        createCard(deck: newDeck, context: context)
-    }
-    
-    private func createCard(deck: Deck, context: NSManagedObjectContext) {
-        let newCartao = Cartao(context: context)
-        //chave e atribbuto
-        newCartao.setValue(1, forKey: "id")
-        newCartao.setValue("Quando começou a primeira Revolução Industrial?", forKey: "perguntas")
-        newCartao.setValue("1760", forKey: "respostas")
-        
-        deck.addToCartao(newCartao)
-        
-        saveContext(context: context)
-    }
-    
-    //func salvar no Core Data
-    private func saveContext(context: NSManagedObjectContext) {
-        do {
-            try context.save()
-        } catch { print(error) }
     }
 }
