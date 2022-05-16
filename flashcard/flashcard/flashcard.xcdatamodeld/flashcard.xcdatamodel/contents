@@ -20,6 +20,6 @@
     <elements>
         <element name="Cartao" positionX="-236.9833984375" positionY="-20.636474609375" width="128" height="89"/>
         <element name="Deck" positionX="-54" positionY="9" width="128" height="88"/>
-        <element name="Historico" positionX="139.83203125" positionY="-6.0362548828125" width="128" height="103"/>
+        <element name="Historico" positionX="139.83203125" positionY="-6.0362548828125" width="128" height="89"/>
     </elements>
 </model>

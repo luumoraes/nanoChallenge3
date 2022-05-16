@@ -1,10 +1,3 @@
-//
-//  QuestionCard.swift
-//  flashcard
-//
-//  Created by Wellinston Oliveira on 28/04/22.
-//
-
 import UIKit
 
 class QuestionCard: UIControl {
@@ -14,7 +7,9 @@ class QuestionCard: UIControl {
     private weak var textArea: UIControl?
     private weak var title: UILabel?
     private weak var text: UILabel?
-    
+    public var historicList: [Historico] = []
+    public var contPosicao: String?
+
     private var questionText: String? {
         didSet {
             self.text?.text = questionText
@@ -23,20 +18,21 @@ class QuestionCard: UIControl {
     //declarando variáveis como string da label do flashcard
     private var answerText: String?
     
-    private var titleText: String {
-        return isFlipped ? "RESPOSTA" : "PERGUNTA"
+    private var titleText: String? {
+        return isFlipped ? "VERSO " + (contPosicao ?? "N/A") : "FRENTE " + (contPosicao ?? "N/A")
     }
     
-    //função de virar carta - Começa como falsa (Lado da pergunta)
-    //                        Quando vira, se torna verdadeiro (lado da resposta)
+    // Função de virar carta - Começa como falsa (Lado da pergunta)
+    // Quando vira, se torna verdadeiro (lado da resposta)
     public var isFlipped: Bool = false {
         didSet {
             
             if isFlipped {
                 cardArea?.backgroundColor = UIColor(red: 0.824, green: 0.447, blue: 0, alpha: 1)
+                //cardArea?.backgroundColor = .systemOrange
                 textArea?.backgroundColor = UIColor(red: 0.859, green: 0.671, blue: 0.447, alpha: 1)
                 
-                title?.text = "RESPOSTA"
+                title?.text = titleText
                 text?.text = answerText
                 
                 UIView.transition(with: self, duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: nil)
@@ -44,7 +40,7 @@ class QuestionCard: UIControl {
                 cardArea?.backgroundColor = UIColor(red: 0, green: 0.369, blue: 0.686, alpha: 1)
                 textArea?.backgroundColor = UIColor(red: 0.447, green: 0.631, blue: 0.792, alpha: 1)
                 
-                title?.text = "PERGUNTA"
+                title?.text = titleText
                 text?.text = questionText
                 
                 UIView.transition(with: self, duration: 0.5, options: .transitionFlipFromRight, animations: nil, completion: nil)
@@ -53,7 +49,7 @@ class QuestionCard: UIControl {
     }
     
     private func initComplement() {
-        //definindo a figura usando UiView
+        //Definindo a figura usando UiView
         let cardArea = UIControl()
         let textArea = UIControl()
         let title = UILabel()
@@ -91,6 +87,7 @@ class QuestionCard: UIControl {
         text.numberOfLines = 0
         text.font = UIFont.systemFont(ofSize: 18)
         text.text = questionText
+        text.textColor = .white
         
         //constraint UiView
         NSLayoutConstraint.activate([
@@ -150,4 +147,3 @@ class QuestionCard: UIControl {
         self.answerText = answer
     }
 }
-

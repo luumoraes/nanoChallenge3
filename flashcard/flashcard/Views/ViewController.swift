@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  flashcard
-//
-//  Created by Wellinston Oliveira on 27/04/22.
-//
-
 import UIKit
 import CoreData
 
@@ -44,6 +37,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         self.deck = fetchDecks()
         
+        tableView?.contentInsetAdjustmentBehavior = .never
         tableView?.dataSource = self
         tableView?.delegate = self
         

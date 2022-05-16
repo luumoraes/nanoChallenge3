@@ -64,6 +64,21 @@
             </objects>
             <point key="canvasLocation" x="1401" y="82"/>
         </scene>
+        <!--Historico View Controller-->
+        <scene sceneID="Yhb-k7-pdr">
+            <objects>
+                <viewController storyboardIdentifier="historicoViewController" id="7D8-NJ-6Vn" customClass="HistoricoViewController" customModule="flashcard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ee8-Iy-C2Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ouD-Nz-tZc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Dn-Y4-h9k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2112" y="82"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="m8z-3M-BcY">
             <objects>

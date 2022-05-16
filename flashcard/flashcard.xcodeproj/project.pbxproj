@@ -7,30 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5103ACC9282DA80000C1BA0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5103ACC8282DA80000C1BA0D /* Assets.xcassets */; };
 		513E589A281B1B4100B20C38 /* Cartao+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E5894281B1B4100B20C38 /* Cartao+CoreDataClass.swift */; };
 		513E589B281B1B4100B20C38 /* Cartao+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E5895281B1B4100B20C38 /* Cartao+CoreDataProperties.swift */; };
 		513E589C281B1B4100B20C38 /* Historico+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E5896281B1B4100B20C38 /* Historico+CoreDataClass.swift */; };
 		513E589D281B1B4100B20C38 /* Historico+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E5897281B1B4100B20C38 /* Historico+CoreDataProperties.swift */; };
 		513E589E281B1B4100B20C38 /* Deck+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E5898281B1B4100B20C38 /* Deck+CoreDataClass.swift */; };
 		513E589F281B1B4100B20C38 /* Deck+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E5899281B1B4100B20C38 /* Deck+CoreDataProperties.swift */; };
+		51453A782826233400C5D074 /* HistoricoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51453A772826233400C5D074 /* HistoricoViewController.swift */; };
 		516D88E42819DC1F0033F467 /* FlashCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D88E32819DC1F0033F467 /* FlashCard.swift */; };
 		517F95232819D4BD00AA2B2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517F95222819D4BD00AA2B2B /* AppDelegate.swift */; };
 		517F95252819D4BD00AA2B2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517F95242819D4BD00AA2B2B /* SceneDelegate.swift */; };
 		517F95272819D4BD00AA2B2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517F95262819D4BD00AA2B2B /* ViewController.swift */; };
 		517F952A2819D4BD00AA2B2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517F95282819D4BD00AA2B2B /* Main.storyboard */; };
 		517F952D2819D4BD00AA2B2B /* flashcard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 517F952B2819D4BD00AA2B2B /* flashcard.xcdatamodeld */; };
-		517F952F2819D4BE00AA2B2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 517F952E2819D4BE00AA2B2B /* Assets.xcassets */; };
 		517F95322819D4BF00AA2B2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517F95302819D4BF00AA2B2B /* LaunchScreen.storyboard */; };
 		51856207281AE7BF00FE3A5F /* QuestionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51856206281AE7BF00FE3A5F /* QuestionCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5103ACC8282DA80000C1BA0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		513E5894281B1B4100B20C38 /* Cartao+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cartao+CoreDataClass.swift"; sourceTree = "<group>"; };
 		513E5895281B1B4100B20C38 /* Cartao+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cartao+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		513E5896281B1B4100B20C38 /* Historico+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Historico+CoreDataClass.swift"; sourceTree = "<group>"; };
 		513E5897281B1B4100B20C38 /* Historico+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Historico+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		513E5898281B1B4100B20C38 /* Deck+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deck+CoreDataClass.swift"; sourceTree = "<group>"; };
 		513E5899281B1B4100B20C38 /* Deck+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deck+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		51453A772826233400C5D074 /* HistoricoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricoViewController.swift; sourceTree = "<group>"; };
 		516D88E32819DC1F0033F467 /* FlashCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCard.swift; sourceTree = "<group>"; };
 		517F951F2819D4BD00AA2B2B /* flashcard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flashcard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		517F95222819D4BD00AA2B2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,7 +41,6 @@
 		517F95262819D4BD00AA2B2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		517F95292819D4BD00AA2B2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		517F952C2819D4BD00AA2B2B /* flashcard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = flashcard.xcdatamodel; sourceTree = "<group>"; };
-		517F952E2819D4BE00AA2B2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		517F95312819D4BF00AA2B2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		517F95332819D4BF00AA2B2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51856206281AE7BF00FE3A5F /* QuestionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCard.swift; sourceTree = "<group>"; };
@@ -68,6 +70,16 @@
 			path = CoreDataModel;
 			sourceTree = "<group>";
 		};
+		51453A762826230500C5D074 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				517F95262819D4BD00AA2B2B /* ViewController.swift */,
+				516D88E32819DC1F0033F467 /* FlashCard.swift */,
+				51453A772826233400C5D074 /* HistoricoViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		517F95162819D4BD00AA2B2B = {
 			isa = PBXGroup;
 			children = (
@@ -88,16 +100,15 @@
 			isa = PBXGroup;
 			children = (
 				513E58A0281B1B4D00B20C38 /* CoreDataModel */,
+				51453A762826230500C5D074 /* Views */,
 				517F95222819D4BD00AA2B2B /* AppDelegate.swift */,
 				517F95242819D4BD00AA2B2B /* SceneDelegate.swift */,
-				517F95262819D4BD00AA2B2B /* ViewController.swift */,
-				517F95282819D4BD00AA2B2B /* Main.storyboard */,
 				51856206281AE7BF00FE3A5F /* QuestionCard.swift */,
-				516D88E32819DC1F0033F467 /* FlashCard.swift */,
-				517F952E2819D4BE00AA2B2B /* Assets.xcassets */,
+				517F95282819D4BD00AA2B2B /* Main.storyboard */,
 				517F95302819D4BF00AA2B2B /* LaunchScreen.storyboard */,
 				517F95332819D4BF00AA2B2B /* Info.plist */,
 				517F952B2819D4BD00AA2B2B /* flashcard.xcdatamodeld */,
+				5103ACC8282DA80000C1BA0D /* Assets.xcassets */,
 			);
 			path = flashcard;
 			sourceTree = "<group>";
@@ -161,7 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				517F95322819D4BF00AA2B2B /* LaunchScreen.storyboard in Resources */,
-				517F952F2819D4BE00AA2B2B /* Assets.xcassets in Resources */,
+				5103ACC9282DA80000C1BA0D /* Assets.xcassets in Resources */,
 				517F952A2819D4BD00AA2B2B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +193,7 @@
 				517F95252819D4BD00AA2B2B /* SceneDelegate.swift in Sources */,
 				513E589A281B1B4100B20C38 /* Cartao+CoreDataClass.swift in Sources */,
 				516D88E42819DC1F0033F467 /* FlashCard.swift in Sources */,
+				51453A782826233400C5D074 /* HistoricoViewController.swift in Sources */,
 				513E589C281B1B4100B20C38 /* Historico+CoreDataClass.swift in Sources */,
 				513E589F281B1B4100B20C38 /* Deck+CoreDataProperties.swift in Sources */,
 				513E589B281B1B4100B20C38 /* Cartao+CoreDataProperties.swift in Sources */,
@@ -331,8 +343,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 273QY7G77Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = flashcard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Revisando;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -358,8 +372,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 273QY7G77Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = flashcard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Revisando;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
